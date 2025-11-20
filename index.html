@@ -34,8 +34,8 @@
             <section class="mb-20 flex flex-col md:flex-row items-center gap-12">
                 <div class="flex-1">
                     <div class="sketch-box p-8 bg-white transform rotate-1">
-                        <h1 class="text-5xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-pencil">Vamsi</span>
-                            👋</h1>
+                        <h1 class="text-5xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-pencil">Vamsi
+                                Penmetsa</span> 👋</h1>
                         <h2 class="text-2xl md:text-3xl text-pencil-light mb-6">Lead DevOps Engineer & AI Enthusiast
                         </h2>
                         <p class="text-xl mb-8 leading-relaxed">
@@ -46,7 +46,7 @@
                         </p>
                         <div class="flex gap-4 flex-wrap">
                             <a href="#contact" class="sketch-btn">Let's Talk!</a>
-                            <a href="./public/Vamsi_Penmetsa_Resume.pdf" target="_blank"
+                            <a href="Vamsi_Penmetsa_Resume.pdf" target="_blank"
                                 class="sketch-btn bg-marker-blue hover:bg-blue-200">View Resume</a>
                         </div>
                     </div>
@@ -277,34 +277,44 @@
                 </div>
             </section>
 
-            <!-- Resources & Community Section -->
-            <section id="resources" class="mb-20">
-                <h2 class="section-title">Resources & Community</h2>
+            <!-- Resources & Community Section (Highlighted) -->
+            <section id="resources" class="mb-20 relative">
+                <!-- Background Highlight for the whole section -->
+                <div
+                    class="absolute inset-0 bg-marker-yellow opacity-20 transform -skew-y-1 rounded-3xl -z-10 scale-105">
+                </div>
+
+                <div class="text-center mb-10">
+                    <h2 class="section-title text-5xl transform -rotate-2">🚀 Resources & Community</h2>
+                    <p class="text-xl text-pencil mt-2 font-bold">Everything you need to grow!</p>
+                </div>
 
                 <!-- Free Products -->
                 <div class="mb-12">
-                    <h3 class="text-2xl font-bold mb-6 transform -rotate-1"><span class="highlight-pink">Free for first
-                            100!</span> 🎁</h3>
+                    <h3 class="text-2xl font-bold mb-6"><span class="highlight-pink px-2">Free for first 100!</span> 🎁
+                    </h3>
                     <div class="grid md:grid-cols-2 gap-8">
                         <!-- Product 1 -->
-                        <div class="sketch-box p-6 bg-white relative group">
+                        <div class="sketch-box p-6 bg-white relative group border-4 border-marker-yellow">
                             <div
-                                class="absolute -top-3 -right-3 bg-marker-yellow text-pencil font-bold px-3 py-1 transform rotate-12 shadow-sm border border-pencil">
+                                class="absolute -top-4 -right-4 bg-red-500 text-white font-bold px-4 py-1 transform rotate-12 shadow-lg border-2 border-white rounded-full animate-pulse">
                                 FREE</div>
-                            <h4 class="text-xl font-bold mb-2">GitHub Copilot Visual Guide</h4>
-                            <p class="mb-4 text-sm">Prompting Made Simple. Master AI coding assistance.</p>
+                            <h4 class="text-2xl font-bold mb-2">GitHub Copilot Visual Guide</h4>
+                            <p class="mb-4 text-lg">Prompting Made Simple. Master AI coding assistance.</p>
                             <a href="https://vamsipenmetsa.gumroad.com/l/ryfhqh" target="_blank"
-                                class="sketch-btn text-sm w-full text-center block">Get it Free ➔</a>
+                                class="sketch-btn w-full text-center block bg-marker-yellow hover:bg-yellow-300 text-xl">Get
+                                it Free ➔</a>
                         </div>
                         <!-- Product 2 -->
-                        <div class="sketch-box p-6 bg-white relative group">
+                        <div class="sketch-box p-6 bg-white relative group border-4 border-marker-yellow">
                             <div
-                                class="absolute -top-3 -right-3 bg-marker-yellow text-pencil font-bold px-3 py-1 transform -rotate-6 shadow-sm border border-pencil">
+                                class="absolute -top-4 -right-4 bg-red-500 text-white font-bold px-4 py-1 transform -rotate-6 shadow-lg border-2 border-white rounded-full animate-pulse">
                                 FREE</div>
-                            <h4 class="text-xl font-bold mb-2">Kubernetes Cheat Sheet</h4>
-                            <p class="mb-4 text-sm">Complete Pack: From Basics to Advanced K8s.</p>
+                            <h4 class="text-2xl font-bold mb-2">Kubernetes Cheat Sheet</h4>
+                            <p class="mb-4 text-lg">Complete Pack: From Basics to Advanced K8s.</p>
                             <a href="https://vamsipenmetsa.gumroad.com/l/knioda" target="_blank"
-                                class="sketch-btn text-sm w-full text-center block">Get it Free ➔</a>
+                                class="sketch-btn w-full text-center block bg-marker-yellow hover:bg-yellow-300 text-xl">Get
+                                it Free ➔</a>
                         </div>
                     </div>
                 </div>
@@ -312,50 +322,50 @@
                 <!-- Services & Community -->
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Interview Guidance -->
-                    <div class="sticky-note transform rotate-1 relative">
+                    <div class="sticky-note-blue transform rotate-1 relative border-2 border-pencil">
                         <div
                             class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gray-300 rounded-full shadow-inner border border-gray-400">
                         </div> <!-- Pin -->
-                        <h3 class="text-xl font-bold mb-2">1-on-1 Interview Guidance</h3>
-                        <p class="mb-4 text-sm">
-                            I've conducted <span class="font-bold highlight-pink">150+ technical interviews</span> as a
-                            Lead DevOps Engineer.
+                        <h3 class="text-2xl font-bold mb-4">1-on-1 Interview Guidance</h3>
+                        <p class="mb-4 text-lg">
+                            I've conducted <span class="font-bold highlight-pink px-1">150+ technical interviews</span>
+                            as a Lead DevOps Engineer.
                         </p>
-                        <p class="mb-4 text-sm">
+                        <p class="mb-6 text-lg">
                             Focused on <span class="font-bold">Cloud, DevOps, & SRE</span>. Let's crack your next
                             interview!
                         </p>
                         <a href="https://topmate.io/vamsipenmetsa/1755002" target="_blank"
-                            class="block text-center border-2 border-pencil border-dashed py-2 hover:bg-white/50 transition-colors font-bold">Book
-                            a Session</a>
+                            class="block text-center bg-white border-2 border-pencil py-3 hover:bg-blue-50 transition-colors font-bold text-xl rounded shadow-sketch-hover">Book
+                            a Session 📅</a>
                     </div>
 
                     <!-- Communities -->
                     <div class="space-y-6">
                         <!-- LinkedIn Group -->
                         <a href="https://linkedin.openinapp.co/groups-13986647" target="_blank"
-                            class="block sketch-box p-4 bg-white hover:bg-blue-50 transition-colors flex items-center gap-4">
-                            <i class="fab fa-linkedin text-3xl text-blue-600"></i>
+                            class="block sketch-box p-6 bg-white hover:bg-blue-50 transition-colors flex items-center gap-6 border-l-8 border-blue-600">
+                            <i class="fab fa-linkedin text-5xl text-blue-600"></i>
                             <div>
-                                <h4 class="font-bold">LinkedIn DevOps Pros</h4>
-                                <p class="text-xs text-pencil-light">Join 15,000+ Professionals</p>
+                                <h4 class="text-xl font-bold">LinkedIn DevOps Pros</h4>
+                                <p class="text-pencil-light font-bold">Join 15,000+ Professionals</p>
                             </div>
                         </a>
 
                         <!-- Warsaw Community -->
                         <a href="https://www.facebook.com/share/19y88wsYEC/?mibextid=wwXIfr" target="_blank"
-                            class="block sketch-box p-4 bg-white hover:bg-blue-50 transition-colors flex items-center gap-4">
-                            <i class="fab fa-facebook text-3xl text-blue-600"></i>
+                            class="block sketch-box p-6 bg-white hover:bg-blue-50 transition-colors flex items-center gap-6 border-l-8 border-blue-600">
+                            <i class="fab fa-facebook text-5xl text-blue-600"></i>
                             <div>
-                                <h4 class="font-bold">International Friends Warsaw</h4>
-                                <p class="text-xs text-pencil-light">Organizer of 1,000+ member club</p>
+                                <h4 class="text-xl font-bold">International Friends Warsaw</h4>
+                                <p class="text-pencil-light font-bold">Organizer of 1,000+ member club</p>
                             </div>
                         </a>
 
                         <!-- CTA -->
                         <a href="https://openinapp.link/aq10m" target="_blank"
-                            class="block sketch-box p-4 bg-marker-green hover:bg-green-200 transition-colors flex items-center justify-center gap-2 font-bold">
-                            <i class="fas fa-comments"></i> Need Help? Let's Connect!
+                            class="block sketch-box p-6 bg-marker-green hover:bg-green-400 transition-all transform hover:scale-105 flex items-center justify-center gap-3 font-bold text-2xl shadow-sketch-hover border-4 border-pencil">
+                            <i class="fas fa-comments"></i> Need Help? Let's Connect! ✅
                         </a>
                     </div>
                 </div>
