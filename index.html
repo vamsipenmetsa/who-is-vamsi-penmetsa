@@ -51,13 +51,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-64 h-64 md:w-80 md:h-80 relative">
-                    <!-- Profile Image with Sketch Border -->
+                <div class="w-64 h-64 md:w-80 md:h-80 relative overflow-visible mx-auto md:mx-0">
+                    <!-- Profile Image with Sketch Border Shadow Effect -->
                     <div
-                        class="absolute inset-0 border-4 border-pencil rounded-full transform translate-x-2 translate-y-2">
+                        class="absolute w-full h-full border-4 border-pencil rounded-full transform translate-x-2 translate-y-2">
                     </div>
                     <img src="./public/vamsi-profile.jpg" alt="Vamsi Penmetsa"
                         class="w-full h-full object-cover object-top rounded-full border-4 border-pencil bg-white relative z-10">
+                    <!-- Fun fact badge -->
+                    <div
+                        class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white border-2 border-pencil px-4 py-2 rounded-full shadow-sketch text-sm font-bold whitespace-nowrap z-20">
+                        📍 Warsaw, Poland
+                    </div>
                 </div>
             </section>
 
