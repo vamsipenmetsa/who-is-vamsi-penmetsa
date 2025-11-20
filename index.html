@@ -11,6 +11,20 @@
 </head>
 
 <body>
+    <!-- SVG Filters & Definitions -->
+    <svg class="hidden">
+        <defs>
+            <filter id="pencil-texture">
+                <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="5" stitchTiles="stitch"
+                    result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+            </marker>
+        </defs>
+    </svg>
+
     <div class="max-w-5xl mx-auto px-4 py-8 relative">
         <!-- Header / Nav -->
         <header
@@ -80,16 +94,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-64 h-64 md:w-80 md:h-80 relative">
-                    <!-- Profile Image with Sketch Border -->
-                    <div class="absolute -inset-3 border-4 border-pencil dark:border-pencil-dark rounded-full">
-                    </div>
+                <div class="w-64 h-64 md:w-80 md:h-80 relative group">
+                    <!-- Hand-drawn SVG Border -->
+                    <svg class="absolute -inset-4 w-[115%] h-[115%] text-pencil dark:text-pencil-dark animate-spin-slow"
+                        viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M50 5 C 75 5, 95 25, 95 50 C 95 75, 75 95, 50 95 C 25 95, 5 75, 5 50 C 5 25, 25 5, 50 5"
+                            stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 2" stroke-linecap="round" />
+                        <path
+                            d="M50 2 C 78 2, 98 22, 98 50 C 98 78, 78 98, 50 98 C 22 98, 2 78, 2 50 C 2 22, 22 2, 50 2"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            style="filter: url(#pencil-texture)" />
+                    </svg>
+
+                    <!-- Profile Image -->
                     <img src="./public/vamsi-profile.jpg" alt="Vamsi Penmetsa"
-                        class="w-full h-full object-cover object-top rounded-full border-4 border-pencil bg-white relative z-10">
-                    <!-- Fun fact badge -->
-                    <div
-                        class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white border-2 border-pencil px-4 py-2 rounded-full shadow-sketch text-sm font-bold whitespace-nowrap">
-                        📍 Warsaw, Poland
+                        class="w-full h-full object-cover object-top rounded-full border-4 border-white dark:border-paper-dark shadow-lg relative z-10">
+
+                    <!-- Fun fact badge (Fixed Position) -->
+                    <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+                        <div
+                            class="bg-white dark:bg-paper-dark border-2 border-pencil dark:border-pencil-dark px-4 py-2 rounded-full shadow-sketch flex items-center gap-2 whitespace-nowrap transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                            <span class="text-xl">📍</span>
+                            <span class="font-bold text-pencil dark:text-pencil-dark">Warsaw, Poland</span>
+                        </div>
+                        <!-- Doodle Arrow -->
+                        <svg class="absolute -right-12 -top-8 w-12 h-12 text-pencil dark:text-pencil-dark transform rotate-12 hidden md:block"
+                            viewBox="0 0 50 50" fill="none">
+                            <path d="M10 40 Q 25 10 40 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                marker-end="url(#arrowhead)" />
+                        </svg>
                     </div>
                 </div>
             </section>
