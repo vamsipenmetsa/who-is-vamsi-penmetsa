@@ -37,12 +37,20 @@ body {
 }
 
 /* Hand-drawn Utilities */
+/* Hand-drawn Utilities */
 .highlight-yellow {
   background: linear-gradient(120deg, rgba(255, 249, 196, 0.8) 0%, rgba(255, 249, 196, 0.8) 100%);
   background-repeat: no-repeat;
   background-size: 100% 45%;
   background-position: 0 85%;
-  @apply px-1 dark:text-pencil;
+  @apply px-1 text-pencil;
+}
+
+.dark .highlight-yellow {
+  background: none;
+  @apply text-yellow-300;
+  text-shadow: 0 0 8px rgba(253, 224, 71, 0.3);
+  border-bottom: 2px dashed rgba(253, 224, 71, 0.5);
 }
 
 .highlight-pink {
@@ -50,7 +58,14 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 45%;
   background-position: 0 85%;
-  @apply px-1 dark:text-pencil;
+  @apply px-1 text-pencil;
+}
+
+.dark .highlight-pink {
+  background: none;
+  @apply text-pink-300;
+  text-shadow: 0 0 8px rgba(249, 168, 212, 0.3);
+  border-bottom: 2px dashed rgba(249, 168, 212, 0.5);
 }
 
 .highlight-green {
@@ -58,7 +73,14 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 45%;
   background-position: 0 85%;
-  @apply px-1 dark:text-pencil;
+  @apply px-1 text-pencil;
+}
+
+.dark .highlight-green {
+  background: none;
+  @apply text-green-300;
+  text-shadow: 0 0 8px rgba(134, 239, 172, 0.3);
+  border-bottom: 2px dashed rgba(134, 239, 172, 0.5);
 }
 
 .highlight-blue {
@@ -66,7 +88,14 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 45%;
   background-position: 0 85%;
-  @apply px-1 dark:text-pencil;
+  @apply px-1 text-pencil;
+}
+
+.dark .highlight-blue {
+  background: none;
+  @apply text-blue-300;
+  text-shadow: 0 0 8px rgba(147, 197, 253, 0.3);
+  border-bottom: 2px dashed rgba(147, 197, 253, 0.5);
 }
 
 .sketch-box {
@@ -97,7 +126,7 @@ body {
 }
 
 .section-title {
-  @apply text-4xl font-bold mb-8 inline-block highlight-yellow dark:text-pencil;
+  @apply text-4xl font-bold mb-8 inline-block highlight-yellow dark:text-pencil-dark;
   transform: rotate(-1deg);
 }
 
