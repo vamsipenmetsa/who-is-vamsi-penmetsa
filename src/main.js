@@ -35,8 +35,32 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.toggle('left-0');
       nav.classList.toggle('w-full');
       nav.classList.toggle('bg-paper');
+      nav.classList.toggle('dark:bg-paper-dark');
       nav.classList.toggle('p-4');
       nav.classList.toggle('shadow-sketch');
+      nav.classList.toggle('z-50');
+    });
+  }
+
+  // Theme Toggle
+  const themeToggleBtn = document.getElementById('theme-toggle');
+
+  // Check for saved theme preference or system preference
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+
+      if (document.documentElement.classList.contains('dark')) {
+        localStorage.theme = 'dark';
+      } else {
+        localStorage.theme = 'light';
+      }
     });
   }
 });

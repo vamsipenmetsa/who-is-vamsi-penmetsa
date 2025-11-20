@@ -25,50 +25,64 @@
                 <a href="#education" class="nav-link">Education</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
-            <!-- Mobile Menu Button (Simple) -->
-            <button class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+            <!-- Theme Toggle & Mobile Menu -->
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="text-2xl text-pencil hover:text-blue-600 transition-colors"
+                    title="Toggle Theme">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button class="md:hidden text-2xl text-pencil"><i class="fas fa-bars"></i></button>
+            </div>
         </header>
 
         <main>
             <!-- Hero Section -->
             <section class="mb-20 flex flex-col md:flex-row items-center gap-12">
                 <div class="flex-1">
-                    <div class="sketch-box p-8 bg-white transform rotate-1 relative">
+                    <div
+                        class="sketch-box p-8 bg-white dark:bg-paper-dark transform rotate-1 relative transition-colors duration-300">
                         <!-- Language badges in corner -->
                         <div class="absolute top-4 right-4 flex gap-2">
-                            <span class="text-xs bg-marker-green px-2 py-1 rounded-full border border-pencil">🗣️
+                            <span
+                                class="text-xs bg-marker-green px-2 py-1 rounded-full border border-pencil dark:border-pencil-dark text-pencil">🗣️
                                 English</span>
                             <span
-                                class="text-xs bg-marker-yellow px-2 py-1 rounded-full border border-pencil">తెలుగు</span>
+                                class="text-xs bg-marker-yellow px-2 py-1 rounded-full border border-pencil dark:border-pencil-dark text-pencil">తెలుగు</span>
                         </div>
 
-                        <h1 class="text-5xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-pencil">Vamsi
+                        <h1 class="text-5xl md:text-6xl font-bold mb-4 dark:text-pencil-dark">Hi, I'm <span
+                                class="text-pencil dark:text-white">Vamsi
                                 Penmetsa</span> 👋</h1>
-                        <h2 class="text-2xl md:text-3xl text-pencil-light mb-4">
-                            <span class="highlight-yellow">Curious Human</span> | Lead DevOps Engineer
+                        <h2 class="text-2xl md:text-3xl text-pencil-light dark:text-pencil-dark-light mb-4">
+                            <span class="highlight-yellow text-pencil">Curious Human</span> | Lead DevOps Engineer
                         </h2>
-                        <p class="text-xl mb-6 leading-relaxed">
-                            <span class="highlight-green">Deploying LLMs as a Service</span> on Azure AKS for
+                        <p class="text-xl mb-6 leading-relaxed dark:text-pencil-dark">
+                            <span class="highlight-green text-pencil">Deploying LLMs as a Service</span> on Azure AKS
+                            for
                             <span class="font-bold">LSEG × Microsoft UK Partnership</span> 🇬🇧
                         </p>
-                        <p class="text-lg mb-8 leading-relaxed">
+                        <p class="text-lg mb-8 leading-relaxed dark:text-pencil-dark">
                             <span class="font-bold">EPAM AI Ambassador</span> ✨ |
                             <span class="font-bold">M365 Copilot Champion</span> |
-                            <span class="highlight-pink">150+ Technical Interviews</span>
+                            <span class="highlight-pink text-pencil">150+ Technical Interviews</span>
                         </p>
                         <div class="flex gap-4 flex-wrap">
-                            <a href="#resources" class="sketch-btn bg-marker-yellow hover:bg-yellow-300">Free Resources
-                                🎁</a>
-                            <a href="#contact" class="sketch-btn">Let's Talk!</a>
+                            <a href="#resources"
+                                class="sketch-btn bg-marker-yellow hover:bg-yellow-300 text-pencil border-pencil dark:border-pencil-dark">Free
+                                Resources 🎁</a>
+                            <a href="#contact"
+                                class="sketch-btn dark:bg-paper-dark dark:text-pencil-dark dark:border-pencil-dark dark:hover:bg-gray-800">Let's
+                                Talk!</a>
                             <a href="Vamsi_Penmetsa_Resume.pdf" target="_blank"
-                                class="sketch-btn bg-marker-blue hover:bg-blue-200">View Resume</a>
+                                class="sketch-btn bg-marker-blue hover:bg-blue-200 text-pencil border-pencil dark:border-pencil-dark">View
+                                Resume</a>
                         </div>
                     </div>
                 </div>
                 <div class="w-64 h-64 md:w-80 md:h-80 relative">
                     <!-- Profile Image with Sketch Border -->
-                    <div
-                        class="absolute inset-0 border-4 border-pencil rounded-full transform translate-x-2 translate-y-2">
+                    <div class="absolute -inset-3 border-4 border-pencil dark:border-pencil-dark rounded-full">
                     </div>
                     <img src="./public/vamsi-profile.jpg" alt="Vamsi Penmetsa"
                         class="w-full h-full object-cover object-top rounded-full border-4 border-pencil bg-white relative z-10">

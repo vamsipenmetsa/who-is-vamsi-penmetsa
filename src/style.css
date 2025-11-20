@@ -11,9 +11,15 @@
   --line: #e0e0e0;
 }
 
+.dark {
+  --paper: #1e1e1e;
+  --pencil: #e0e0e0;
+  --line: #333333;
+}
+
 body {
-  @apply bg-paper text-pencil font-hand overflow-x-hidden;
-  background-image: linear-gradient(#e0e0e0 1px, transparent 1px), linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+  @apply bg-paper dark:bg-paper-dark text-pencil dark:text-pencil-dark font-hand overflow-x-hidden transition-colors duration-300;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
@@ -23,11 +29,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-paper;
+  @apply bg-paper dark:bg-paper-dark;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-pencil-light rounded-full border-4 border-paper;
+  @apply bg-pencil-light dark:bg-pencil-dark-light rounded-full border-4 border-paper dark:border-paper-dark;
 }
 
 /* Hand-drawn Utilities */
@@ -36,7 +42,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 45%;
   background-position: 0 85%;
-  @apply px-1;
+  @apply px-1 dark:text-pencil;
 }
 
 .highlight-pink {
@@ -44,7 +50,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 45%;
   background-position: 0 85%;
-  @apply px-1;
+  @apply px-1 dark:text-pencil;
 }
 
 .highlight-green {
@@ -52,7 +58,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 45%;
   background-position: 0 85%;
-  @apply px-1;
+  @apply px-1 dark:text-pencil;
 }
 
 .highlight-blue {
@@ -60,11 +66,11 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 45%;
   background-position: 0 85%;
-  @apply px-1;
+  @apply px-1 dark:text-pencil;
 }
 
 .sketch-box {
-  @apply bg-white border-2 border-pencil rounded-sm shadow-sketch transition-all duration-300;
+  @apply bg-white dark:bg-paper-dark border-2 border-pencil dark:border-pencil-dark rounded-sm shadow-sketch transition-all duration-300;
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
 }
 
@@ -73,17 +79,17 @@ body {
 }
 
 .sketch-btn {
-  @apply inline-block px-6 py-2 border-2 border-pencil bg-white hover:bg-marker-yellow transition-colors duration-300 font-bold text-lg cursor-pointer;
+  @apply inline-block px-6 py-2 border-2 border-pencil dark:border-pencil-dark bg-white dark:bg-paper-dark dark:text-pencil-dark hover:bg-marker-yellow dark:hover:bg-marker-yellow-dark hover:text-pencil transition-colors duration-300 font-bold text-lg cursor-pointer;
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
 }
 
 .nav-link {
-  @apply text-xl text-pencil hover:text-pencil-light relative;
+  @apply text-xl text-pencil dark:text-pencil-dark hover:text-pencil-light dark:hover:text-pencil-dark-light relative;
 }
 
 .nav-link::after {
   content: '';
-  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-pencil transition-all duration-300;
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-pencil dark:bg-pencil-dark transition-all duration-300;
 }
 
 .nav-link:hover::after {
@@ -91,7 +97,7 @@ body {
 }
 
 .section-title {
-  @apply text-4xl font-bold mb-8 inline-block highlight-yellow;
+  @apply text-4xl font-bold mb-8 inline-block highlight-yellow dark:text-pencil;
   transform: rotate(-1deg);
 }
 

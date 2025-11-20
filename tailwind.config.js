@@ -4,16 +4,26 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        paper: '#fdfbf7',
-        pencil: '#2c3e50',
-        'pencil-light': '#5d6d7e',
-        'marker-yellow': 'rgba(255, 249, 196, 0.8)',
-        'marker-pink': 'rgba(255, 205, 210, 0.8)',
-        'marker-green': 'rgba(200, 230, 201, 0.8)',
-        'marker-blue': 'rgba(187, 222, 251, 0.8)',
+        paper: {
+          DEFAULT: '#fdfbf7',
+          dark: '#1e1e1e',
+        },
+        pencil: {
+          DEFAULT: '#2c3e50',
+          light: '#7f8c8d',
+          dark: '#e0e0e0',
+          'dark-light': '#a0a0a0',
+        },
+        marker: {
+          yellow: { DEFAULT: '#fff9c4', dark: '#fbc02d' },
+          pink: { DEFAULT: '#ffcdd2', dark: '#e53935' },
+          green: { DEFAULT: '#c8e6c9', dark: '#43a047' },
+          blue: { DEFAULT: '#bbdefb', dark: '#1e88e5' },
+        },
         'line-color': '#e0e0e0',
       },
       fontFamily: {
