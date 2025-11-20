@@ -103,16 +103,16 @@ body {
 
 /* Sticky Note Style */
 .sticky-note {
-  @apply p-6 shadow-sketch transform rotate-1 bg-marker-yellow text-pencil;
+  @apply p-6 shadow-sketch transform rotate-1 bg-marker-yellow dark:bg-marker-yellow-dark text-pencil dark:text-pencil;
   border-radius: 2px;
 }
 
 .sticky-note-pink {
-  @apply p-6 shadow-sketch transform -rotate-1 bg-marker-pink text-pencil;
+  @apply p-6 shadow-sketch transform -rotate-1 bg-marker-pink dark:bg-marker-pink-dark text-pencil dark:text-pencil;
 }
 
 .sticky-note-blue {
-  @apply p-6 shadow-sketch transform rotate-2 bg-marker-blue text-pencil;
+  @apply p-6 shadow-sketch transform rotate-2 bg-marker-blue dark:bg-marker-blue-dark text-pencil dark:text-pencil;
 }
 
 /* Animations */
