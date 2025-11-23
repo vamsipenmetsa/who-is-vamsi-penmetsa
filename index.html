@@ -8,15 +8,30 @@
     <link rel="icon" type="image/jpeg" href="/who-is-vamsi-penmetsa/assets/vamsi-profile-f85da86c.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-  <script type="module" crossorigin src="/who-is-vamsi-penmetsa/assets/index-8d2a96af.js"></script>
-  <link rel="stylesheet" href="/who-is-vamsi-penmetsa/assets/index-e2b07e29.css">
+  <script type="module" crossorigin src="/who-is-vamsi-penmetsa/assets/main-f42e5b96.js"></script>
+  <link rel="stylesheet" href="/who-is-vamsi-penmetsa/assets/main-26c6aaa1.css">
 </head>
 
 <body>
+    <div id="scroll-progress"></div>
+    <!-- SVG Filters & Definitions -->
+    <svg class="hidden">
+        <defs>
+            <filter id="pencil-texture">
+                <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="5" stitchTiles="stitch"
+                    result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+            </marker>
+        </defs>
+    </svg>
+
     <div class="max-w-5xl mx-auto px-4 py-8 relative">
         <!-- Header / Nav -->
         <header
-            class="flex justify-between items-center mb-12 sticky top-0 bg-paper/90 backdrop-blur-sm z-50 py-4 border-b-2 border-pencil border-dashed">
+            class="flex justify-between items-center mb-12 sticky top-0 bg-paper/90 dark:bg-paper-dark/90 backdrop-blur-sm z-50 py-4 border-b-2 border-pencil dark:border-pencil-dark border-dashed transition-colors duration-300">
             <div class="text-3xl font-bold transform -rotate-2">
                 <span class="highlight-yellow">Vamsi's Notebook</span> ✏️
             </div>
@@ -27,57 +42,90 @@
                 <a href="#education" class="nav-link">Education</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
-            <!-- Mobile Menu Button (Simple) -->
-            <button class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+            <!-- Theme Toggle & Mobile Menu -->
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="text-2xl text-pencil hover:text-blue-600 transition-colors"
+                    title="Toggle Theme">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button class="md:hidden text-2xl text-pencil"><i class="fas fa-bars"></i></button>
+            </div>
         </header>
 
         <main>
             <!-- Hero Section -->
             <section class="mb-20 flex flex-col md:flex-row items-center gap-12">
                 <div class="flex-1">
-                    <div class="sketch-box p-8 bg-white transform rotate-1 relative">
+                    <div class="sketch-box p-8 transform rotate-1 relative transition-colors duration-300">
                         <!-- Language badges in corner -->
                         <div class="absolute top-4 right-4 flex gap-2">
-                            <span class="text-xs bg-marker-green px-2 py-1 rounded-full border border-pencil">🗣️
+                            <span
+                                class="text-xs bg-marker-green px-2 py-1 rounded-full border border-pencil dark:border-pencil-dark text-pencil">🗣️
                                 English</span>
                             <span
-                                class="text-xs bg-marker-yellow px-2 py-1 rounded-full border border-pencil">తెలుగు</span>
+                                class="text-xs bg-marker-yellow px-2 py-1 rounded-full border border-pencil dark:border-pencil-dark text-pencil">తెలుగు</span>
                         </div>
 
-                        <h1 class="text-5xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-pencil">Vamsi
+                        <h1 class="text-5xl md:text-6xl font-bold mb-4 dark:text-pencil-dark">Hi, I'm <span
+                                class="text-pencil dark:text-white">Vamsi
                                 Penmetsa</span> 👋</h1>
-                        <h2 class="text-2xl md:text-3xl text-pencil-light mb-4">
+                        <h2 class="text-2xl md:text-3xl text-pencil-light dark:text-pencil-dark-light mb-4">
                             <span class="highlight-yellow">Curious Human</span> | Lead DevOps Engineer
                         </h2>
-                        <p class="text-xl mb-6 leading-relaxed">
-                            <span class="highlight-green">Deploying LLMs as a Service</span> on Azure AKS for
+                        <p class="text-xl mb-6 leading-relaxed dark:text-pencil-dark">
+                            <span class="highlight-green">Deploying LLMs as a Service</span> on Azure AKS
+                            for
                             <span class="font-bold">LSEG × Microsoft UK Partnership</span> 🇬🇧
                         </p>
-                        <p class="text-lg mb-8 leading-relaxed">
+                        <p class="text-lg mb-8 leading-relaxed dark:text-pencil-dark">
                             <span class="font-bold">EPAM AI Ambassador</span> ✨ |
                             <span class="font-bold">M365 Copilot Champion</span> |
                             <span class="highlight-pink">150+ Technical Interviews</span>
                         </p>
                         <div class="flex gap-4 flex-wrap">
-                            <a href="#resources" class="sketch-btn bg-marker-yellow hover:bg-yellow-300">Free Resources
-                                🎁</a>
-                            <a href="#contact" class="sketch-btn">Let's Talk!</a>
+                            <a href="#resources"
+                                class="sketch-btn bg-marker-yellow hover:bg-yellow-300 text-pencil border-pencil dark:border-pencil-dark">Free
+                                Resources 🎁</a>
+                            <a href="#contact"
+                                class="sketch-btn dark:bg-paper-dark dark:text-pencil-dark dark:border-pencil-dark dark:hover:bg-gray-800">Let's
+                                Talk!</a>
                             <a href="Vamsi_Penmetsa_Resume.pdf" target="_blank"
-                                class="sketch-btn bg-marker-blue hover:bg-blue-200">View Resume</a>
+                                class="sketch-btn bg-marker-blue hover:bg-blue-200 text-pencil border-pencil dark:border-pencil-dark">View
+                                Resume</a>
                         </div>
                     </div>
                 </div>
-                <div class="w-64 h-64 md:w-80 md:h-80 relative">
-                    <!-- Profile Image with Sketch Border -->
-                    <div
-                        class="absolute inset-0 border-4 border-pencil rounded-full transform translate-x-2 translate-y-2">
-                    </div>
+                <div class="w-64 h-64 md:w-80 md:h-80 relative group">
+                    <!-- Hand-drawn SVG Border -->
+                    <svg class="absolute -inset-4 w-[115%] h-[115%] text-pencil dark:text-pencil-dark animate-spin-slow"
+                        viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M50 5 C 75 5, 95 25, 95 50 C 95 75, 75 95, 50 95 C 25 95, 5 75, 5 50 C 5 25, 25 5, 50 5"
+                            stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 2" stroke-linecap="round" />
+                        <path
+                            d="M50 2 C 78 2, 98 22, 98 50 C 98 78, 78 98, 50 98 C 22 98, 2 78, 2 50 C 2 22, 22 2, 50 2"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            style="filter: url(#pencil-texture)" />
+                    </svg>
+
+                    <!-- Profile Image -->
                     <img src="/who-is-vamsi-penmetsa/assets/vamsi-profile-f85da86c.jpg" alt="Vamsi Penmetsa"
-                        class="w-full h-full object-cover object-top rounded-full border-4 border-pencil bg-white relative z-10">
-                    <!-- Fun fact badge -->
-                    <div
-                        class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white border-2 border-pencil px-4 py-2 rounded-full shadow-sketch text-sm font-bold whitespace-nowrap">
-                        📍 Warsaw, Poland
+                        class="w-full h-full object-cover object-top rounded-full border-4 border-white dark:border-paper-dark shadow-lg relative z-10">
+
+                    <!-- Fun fact badge (Fixed Position) -->
+                    <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+                        <div
+                            class="bg-white dark:bg-paper-dark border-2 border-pencil dark:border-pencil-dark px-4 py-2 rounded-full shadow-sketch flex items-center gap-2 whitespace-nowrap transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                            <span class="text-xl">📍</span>
+                            <span class="font-bold text-pencil dark:text-pencil-dark">Warsaw, Poland</span>
+                        </div>
+                        <!-- Doodle Arrow -->
+                        <svg class="absolute -right-12 -top-8 w-12 h-12 text-pencil dark:text-pencil-dark transform rotate-12 hidden md:block"
+                            viewBox="0 0 50 50" fill="none">
+                            <path d="M10 40 Q 25 10 40 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                marker-end="url(#arrowhead)" />
+                        </svg>
                     </div>
                 </div>
             </section>
@@ -141,7 +189,7 @@
                             <span class="text-sm font-bold bg-pencil text-white px-2 py-1 rounded mb-2 inline-block">May
                                 2025 - Present</span>
                             <h3 class="text-2xl font-bold">AI Ambassador & Copilot Champion</h3>
-                            <h4 class="text-lg text-pencil-light mb-2">@ EPAM Poland</h4>
+                            <h4 class="text-lg text-pencil-light dark:text-pencil-dark-light mb-2">@ EPAM Poland</h4>
                             <p class="mb-2">Promoting Microsoft Copilot, conducting workshops, and driving AI adoption.
                             </p>
                             <div class="flex flex-wrap gap-2 mt-2">
@@ -160,7 +208,7 @@
                             <span class="text-sm font-bold bg-pencil text-white px-2 py-1 rounded mb-2 inline-block">Apr
                                 2023 - Present</span>
                             <h3 class="text-2xl font-bold">Lead Systems Engineer</h3>
-                            <h4 class="text-lg text-pencil-light mb-2">@ EPAM Systems</h4>
+                            <h4 class="text-lg text-pencil-light dark:text-pencil-dark-light mb-2">@ EPAM Systems</h4>
                             <p class="mb-3 font-bold text-lg">🚀 LLM Deployment for LSEG × Microsoft</p>
                             <ul class="list-disc list-inside space-y-1 mb-3 text-sm">
                                 <li>Leading DevOps for LLM deployment on Azure AKS & PaaS</li>
@@ -189,7 +237,7 @@
                             <span class="text-sm font-bold bg-pencil text-white px-2 py-1 rounded mb-2 inline-block">Aug
                                 2022 - Mar 2023</span>
                             <h3 class="text-2xl font-bold">Senior Systems Engineer</h3>
-                            <h4 class="text-lg text-pencil-light mb-2">@ EPAM Systems</h4>
+                            <h4 class="text-lg text-pencil-light dark:text-pencil-dark-light mb-2">@ EPAM Systems</h4>
                             <p class="mb-2">PaaS infrastructure for Corteva. Cloud migration for UBS Switzerland.</p>
                         </div>
                     </div>
@@ -202,7 +250,7 @@
                             <span class="text-sm font-bold bg-pencil text-white px-2 py-1 rounded mb-2 inline-block">Apr
                                 2022 - July 2022</span>
                             <h3 class="text-2xl font-bold">Systems Engineer</h3>
-                            <h4 class="text-lg text-pencil-light mb-2">@ EPAM Systems</h4>
+                            <h4 class="text-lg text-pencil-light dark:text-pencil-dark-light mb-2">@ EPAM Systems</h4>
                             <p class="mb-2">Octopus Deploy automation, KICS security scanning, Kubernetes management.
                             </p>
                         </div>
@@ -216,7 +264,7 @@
                             <span class="text-sm font-bold bg-pencil text-white px-2 py-1 rounded mb-2 inline-block">Dec
                                 2020 - Mar 2022</span>
                             <h3 class="text-2xl font-bold">Digital Marketing & Automation</h3>
-                            <h4 class="text-lg text-pencil-light mb-2">@ ITVersity</h4>
+                            <h4 class="text-lg text-pencil-light dark:text-pencil-dark-light mb-2">@ ITVersity</h4>
                             <p class="mb-2">Managed 55K+ sub YouTube channel. Python automation for metadata.</p>
                         </div>
                     </div>
@@ -229,7 +277,7 @@
                             <span class="text-sm font-bold bg-pencil text-white px-2 py-1 rounded mb-2 inline-block">Apr
                                 2020 - Jan 2022</span>
                             <h3 class="text-2xl font-bold">Systems Engineer</h3>
-                            <h4 class="text-lg text-pencil-light mb-2">@ TCS</h4>
+                            <h4 class="text-lg text-pencil-light dark:text-pencil-dark-light mb-2">@ TCS</h4>
                             <p class="mb-2">Microsoft Kaizala pipelines. Automation Engineer using Python & Appium.</p>
                         </div>
                     </div>
@@ -242,7 +290,7 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <!-- Skill Group 1 -->
                     <div class="sketch-box p-4 text-center transform rotate-1">
-                        <i class="fas fa-cloud text-3xl mb-2 text-pencil"></i>
+                        <i class="fas fa-cloud text-3xl mb-2 text-pencil dark:text-pencil-dark"></i>
                         <h3 class="font-bold mb-2 highlight-blue inline-block">Cloud</h3>
                         <ul class="text-sm space-y-1">
                             <li>Azure</li>
@@ -252,7 +300,7 @@
                     </div>
                     <!-- Skill Group 2 -->
                     <div class="sketch-box p-4 text-center transform -rotate-1">
-                        <i class="fas fa-code text-3xl mb-2 text-pencil"></i>
+                        <i class="fas fa-code text-3xl mb-2 text-pencil dark:text-pencil-dark"></i>
                         <h3 class="font-bold mb-2 highlight-green inline-block">IaC</h3>
                         <ul class="text-sm space-y-1">
                             <li>Terraform</li>
@@ -262,7 +310,7 @@
                     </div>
                     <!-- Skill Group 3 -->
                     <div class="sketch-box p-4 text-center transform rotate-2">
-                        <i class="fas fa-terminal text-3xl mb-2 text-pencil"></i>
+                        <i class="fas fa-terminal text-3xl mb-2 text-pencil dark:text-pencil-dark"></i>
                         <h3 class="font-bold mb-2 highlight-yellow inline-block">Scripting</h3>
                         <ul class="text-sm space-y-1">
                             <li>Python</li>
@@ -272,7 +320,7 @@
                     </div>
                     <!-- Skill Group 4 -->
                     <div class="sketch-box p-4 text-center transform -rotate-2">
-                        <i class="fas fa-robot text-3xl mb-2 text-pencil"></i>
+                        <i class="fas fa-robot text-3xl mb-2 text-pencil dark:text-pencil-dark"></i>
                         <h3 class="font-bold mb-2 highlight-pink inline-block">AI/ML</h3>
                         <ul class="text-sm space-y-1">
                             <li>LLM Ops</li>
@@ -289,7 +337,7 @@
                     <div>
                         <h2 class="section-title">Certifications</h2>
                         <div class="space-y-3">
-                            <div class="sketch-box p-3 bg-white">
+                            <div class="sketch-box p-3">
                                 <p class="font-bold mb-2">☁️ Azure (7 Active)</p>
                                 <ul class="space-y-2 text-sm">
                                     <li class="flex items-start gap-2">
@@ -310,7 +358,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="sketch-box p-3 bg-white">
+                            <div class="sketch-box p-3">
                                 <p class="font-bold mb-2">🤖 AI & Other</p>
                                 <ul class="space-y-2 text-sm">
                                     <li class="flex items-start gap-2">
@@ -335,9 +383,10 @@
                     </div>
                     <div>
                         <h2 class="section-title">Education</h2>
-                        <div class="sketch-box p-6 bg-white">
+                        <div class="sketch-box p-6">
                             <h3 class="text-xl font-bold">Vishnu Institute of Technology</h3>
-                            <p class="text-pencil-light">Bachelor's in Information Technology</p>
+                            <p class="text-pencil-light dark:text-pencil-dark-light">Bachelor's in Information
+                                Technology</p>
                             <div class="mt-4 pt-4 border-t-2 border-dashed border-pencil">
                                 <p class="font-bold">🏆 Honors:</p>
                                 <p>On the Spot Award</p>
@@ -358,11 +407,11 @@
                     <h2 class="section-title text-5xl transform -rotate-2 inline-block">🚀 Resources & Community</h2>
                     <button
                         onclick="navigator.clipboard.writeText(window.location.origin + window.location.pathname + '#resources'); alert('Link copied!');"
-                        class="absolute top-0 -right-12 opacity-0 group-hover:opacity-100 transition-opacity text-pencil hover:text-blue-600"
+                        class="absolute top-0 -right-12 opacity-0 group-hover:opacity-100 transition-opacity text-pencil dark:text-pencil-dark hover:text-blue-600"
                         title="Copy Link">
                         <i class="fas fa-link text-xl"></i>
                     </button>
-                    <p class="text-xl text-pencil mt-2 font-bold">Everything you need to grow!</p>
+                    <p class="text-xl text-pencil dark:text-pencil-dark mt-2 font-bold">Everything you need to grow!</p>
                 </div>
 
                 <!-- Free Products -->
@@ -371,7 +420,7 @@
                     </h3>
                     <div class="grid md:grid-cols-2 gap-8">
                         <!-- Product 1 -->
-                        <div class="sketch-box p-6 bg-white relative group border-4 border-marker-yellow">
+                        <div class="sketch-box p-6 relative group border-4 border-marker-yellow">
                             <div
                                 class="absolute -top-4 -right-4 bg-red-500 text-white font-bold px-4 py-1 transform rotate-12 shadow-lg border-2 border-white rounded-full animate-pulse">
                                 FREE</div>
@@ -382,7 +431,7 @@
                                 it Free ➔</a>
                         </div>
                         <!-- Product 2 -->
-                        <div class="sketch-box p-6 bg-white relative group border-4 border-marker-yellow">
+                        <div class="sketch-box p-6 relative group border-4 border-marker-yellow">
                             <div
                                 class="absolute -top-4 -right-4 bg-red-500 text-white font-bold px-4 py-1 transform -rotate-6 shadow-lg border-2 border-white rounded-full animate-pulse">
                                 FREE</div>
@@ -420,21 +469,23 @@
                     <div class="space-y-6">
                         <!-- LinkedIn Group -->
                         <a href="https://linkedin.openinapp.co/groups-13986647" target="_blank"
-                            class="block sketch-box p-6 bg-white hover:bg-blue-50 transition-colors flex items-center gap-6 border-l-8 border-blue-600">
+                            class="block sketch-box p-6 hover:bg-blue-50 dark:hover:bg-gray-800 transition-colors flex items-center gap-6 border-l-8 border-blue-600">
                             <i class="fab fa-linkedin text-5xl text-blue-600"></i>
                             <div>
                                 <h4 class="text-xl font-bold">LinkedIn DevOps Pros</h4>
-                                <p class="text-pencil-light font-bold">Join 15,000+ Professionals</p>
+                                <p class="text-pencil-light dark:text-pencil-dark-light font-bold">Join 15,000+
+                                    Professionals</p>
                             </div>
                         </a>
 
                         <!-- Warsaw Community -->
                         <a href="https://www.facebook.com/share/19y88wsYEC/?mibextid=wwXIfr" target="_blank"
-                            class="block sketch-box p-6 bg-white hover:bg-blue-50 transition-colors flex items-center gap-6 border-l-8 border-blue-600">
+                            class="block sketch-box p-6 hover:bg-blue-50 dark:hover:bg-gray-800 transition-colors flex items-center gap-6 border-l-8 border-blue-600">
                             <i class="fab fa-facebook text-5xl text-blue-600"></i>
                             <div>
                                 <h4 class="text-xl font-bold">International Friends Warsaw</h4>
-                                <p class="text-pencil-light font-bold">Organizer of 1,000+ member club</p>
+                                <p class="text-pencil-light dark:text-pencil-dark-light font-bold">Organizer of 1,000+
+                                    member club</p>
                             </div>
                         </a>
 
@@ -450,7 +501,7 @@
             <!-- Contact Section -->
             <section id="contact" class="mb-20 text-center">
                 <h2 class="section-title">Get in Touch!</h2>
-                <div class="sketch-box p-8 max-w-2xl mx-auto bg-white relative overflow-hidden">
+                <div class="sketch-box p-8 max-w-2xl mx-auto relative overflow-hidden">
                     <!-- Stamp Effect -->
                     <div
                         class="absolute top-4 right-4 w-16 h-20 border-2 border-pencil flex items-center justify-center transform rotate-6 opacity-50">
@@ -482,7 +533,8 @@
                 </div>
             </section>
 
-            <footer class="text-center text-pencil-light py-8 border-t-2 border-pencil border-dashed">
+            <footer
+                class="text-center text-pencil-light dark:text-pencil-dark-light py-8 border-t-2 border-pencil border-dashed">
                 <p>&copy; 2025 Vamsi Penmetsa. Hand-crafted with <span class="text-red-500">♥</span></p>
             </footer>
         </main>
