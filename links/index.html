@@ -4,161 +4,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vamsi Penmetsa | Links</title>
+    <title>Vamsi Penmetsa | Links & Resources</title>
     <link rel="icon" type="image/jpeg" href="../public/vamsi-profile.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- We'll let main.js handle the CSS import via Vite, but for safety in dev we can link it too or rely on the module graph -->
-    <!-- Actually, in Vite, we usually import CSS in JS. But let's see. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="All my resources, products, services, and community links in one place.">
 </head>
 
-<body class="min-h-screen flex flex-col items-center py-12 px-4 relative overflow-x-hidden">
+<body class="min-h-screen flex flex-col items-center py-8 px-4 relative overflow-x-hidden">
 
-    <!-- Scribbles Background -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10 opacity-10 dark:opacity-5">
-        <svg class="absolute top-10 left-10 w-32 h-32 transform -rotate-12" viewBox="0 0 100 100">
-            <path d="M10 10 Q 50 50 90 10" stroke="currentColor" fill="none" stroke-width="2" />
-            <path d="M10 30 Q 50 70 90 30" stroke="currentColor" fill="none" stroke-width="2" />
-        </svg>
-        <svg class="absolute bottom-20 right-10 w-40 h-40 transform rotate-12" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="40" stroke="currentColor" fill="none" stroke-width="2" stroke-dasharray="8 4" />
-        </svg>
-    </div>
-
-    <!-- Profile Section -->
-    <div class="text-center mb-10 relative z-10">
-        <div class="relative inline-block group">
-            <div
-                class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
-            </div>
-            <img src="../public/vamsi-profile.jpg" alt="Vamsi Penmetsa"
-                class="relative w-32 h-32 rounded-full border-4 border-white dark:border-paper-dark shadow-sketch mx-auto mb-4 object-cover transform transition duration-500 hover:scale-105 hover:rotate-3">
-
-            <!-- Scribble Halo -->
-            <svg class="absolute -top-6 -left-6 w-44 h-44 text-marker-yellow animate-spin-slow opacity-60 pointer-events-none"
-                viewBox="0 0 100 100">
-                <path d="M50 5 C 75 5, 95 25, 95 50 C 95 75, 75 95, 50 95 C 25 95, 5 75, 5 50 C 5 25, 25 5, 50 5"
-                    fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4,4" />
-                <path d="M50 10 C 70 10, 90 30, 90 50 C 90 70, 70 90, 50 90 C 30 90, 10 70, 10 50 C 10 30, 30 10, 50 10"
-                    fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3,6"
-                    transform="rotate(45 50 50)" />
-            </svg>
-        </div>
-        <h1 class="text-4xl font-bold mb-2 mt-4 relative inline-block">
-            Vamsi Penmetsa
-            <svg class="absolute -bottom-2 left-0 w-full h-3 text-marker-yellow -z-10" viewBox="0 0 100 10"
-                preserveAspectRatio="none">
-                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="8" fill="none" opacity="0.6" />
-            </svg>
-        </h1>
-        <p class="text-pencil-light dark:text-pencil-dark-light text-lg font-medium mt-2">Lead DevOps Engineer | AI &
-            Cloud</p>
+    <!-- Minimal Profile Section -->
+    <div class="text-center mb-6 relative z-10">
+        <img src="../public/vamsi-profile.jpg" alt="Vamsi Penmetsa"
+            class="w-20 h-20 rounded-full border-2 border-pencil dark:border-pencil-dark shadow-md mx-auto mb-3 object-cover object-top">
+        <h1 class="text-2xl font-bold mb-0.5 text-gray-900 dark:text-gray-50">Vamsi Penmetsa</h1>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Lead DevOps Engineer | AI & Cloud</p>
     </div>
 
     <!-- Links Container -->
-    <div class="w-full max-w-md space-y-8 z-10">
+    <div class="w-full max-w-lg space-y-6 z-10 mb-8">
 
-        <!-- Section: Top Picks -->
-        <div class="space-y-4 relative">
-            <div class="text-center mb-2">
-                <h2 class="text-xl font-bold highlight-yellow inline-block transform -rotate-1">🔥 Top Resources</h2>
+        <!-- FREE RESOURCES SECTION -->
+        <section class="space-y-3">
+            <div class="text-center mb-4">
+                <div class="inline-block relative z-10">
+                    <h2
+                        class="text-2xl font-bold inline-block px-4 py-2 bg-marker-yellow dark:bg-marker-yellow-dark rounded-lg transform -rotate-1 shadow-sketch relative z-0">
+                        🎁 Free Resources
+                    </h2>
+                    <span
+                        class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse z-20">FREE</span>
+                </div>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 font-semibold">⚡ Limited: First 100 people only
+                    • $0</p>
             </div>
 
-            <a href="https://vamsipenmetsa.gumroad.com/l/ryfhqh" target="_blank"
-                class="block sketch-box p-4 flex items-center gap-4 link-card bg-white dark:bg-paper-dark group hover:bg-marker-yellow/10 transition-all text-left">
-                <div
-                    class="bg-marker-yellow w-12 h-12 flex items-center justify-center rounded-full border-2 border-pencil text-2xl group-hover:scale-110 transition-transform shrink-0">
-                    🎁</div>
-                <div class="flex-1">
-                    <h3 class="font-bold text-lg group-hover:text-blue-600 transition-colors">GitHub Copilot Guide</h3>
-                    <p class="text-sm text-pencil-light dark:text-pencil-dark-light">Free Visual Guide for Developers
-                    </p>
+            <a href="https://vamsipenmetsa.gumroad.com/l/ryfhqh" target="_blank" class="link-item group relative">
+                <span
+                    class="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10">FREE</span>
+                <div class="link-icon bg-yellow-400">
+                    <i class="fas fa-robot text-2xl text-gray-800"></i>
                 </div>
-                <i
-                    class="fas fa-arrow-right opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all"></i>
+                <div class="link-content">
+                    <h3 class="link-title">GitHub Copilot Visual Guide</h3>
+                    <p class="link-description">Master AI-powered coding with prompting strategies</p>
+                </div>
+                <i class="link-arrow fas fa-arrow-right"></i>
             </a>
 
-            <a href="https://vamsipenmetsa.gumroad.com/l/knioda" target="_blank"
-                class="block sketch-box p-4 flex items-center gap-4 link-card bg-white dark:bg-paper-dark group hover:bg-marker-blue/10 transition-all text-left">
-                <div
-                    class="bg-marker-blue w-12 h-12 flex items-center justify-center rounded-full border-2 border-pencil text-2xl group-hover:scale-110 transition-transform shrink-0">
-                    ☸️</div>
-                <div class="flex-1">
-                    <h3 class="font-bold text-lg group-hover:text-blue-600 transition-colors">K8s Cheat Sheet</h3>
-                    <p class="text-sm text-pencil-light dark:text-pencil-dark-light">Complete Kubernetes Pack</p>
+            <a href="https://vamsipenmetsa.gumroad.com/l/knioda" target="_blank" class="link-item group relative">
+                <span
+                    class="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10">FREE</span>
+                <div class="link-icon bg-blue-400">
+                    <i class="fas fa-dharmachakra text-2xl text-white"></i>
                 </div>
-                <i
-                    class="fas fa-arrow-right opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all"></i>
+                <div class="link-content">
+                    <h3 class="link-title">Kubernetes Cheat Sheet</h3>
+                    <p class="link-description">Complete K8s reference from basics to advanced</p>
+                </div>
+                <i class="link-arrow fas fa-arrow-right"></i>
             </a>
-        </div>
+        </section>
 
-        <!-- Section: Services -->
-        <div class="space-y-4 mt-8">
-            <div class="text-center mb-2">
-                <h2 class="text-xl font-bold highlight-pink inline-block transform rotate-1">🤝 Work With Me</h2>
+        <!-- SERVICES SECTION -->
+        <section class="space-y-3">
+            <div class="text-center mb-4">
+                <h2
+                    class="text-2xl font-bold inline-block px-4 py-2 bg-marker-pink dark:bg-marker-pink-dark rounded-lg transform rotate-1 shadow-sketch">
+                    💼 Services
+                </h2>
             </div>
 
-            <a href="https://topmate.io/vamsipenmetsa/1755002" target="_blank"
-                class="block sketch-box p-4 flex items-center gap-4 link-card bg-white dark:bg-paper-dark group hover:bg-marker-green/10 transition-all text-left">
-                <div
-                    class="bg-marker-green w-12 h-12 flex items-center justify-center rounded-full border-2 border-pencil text-2xl group-hover:scale-110 transition-transform shrink-0">
-                    📅</div>
-                <div class="flex-1">
-                    <h3 class="font-bold text-lg group-hover:text-blue-600 transition-colors">1:1 Mentorship</h3>
-                    <p class="text-sm text-pencil-light dark:text-pencil-dark-light">Career Guidance & Mock Interviews
-                    </p>
+            <a href="https://topmate.io/vamsipenmetsa/1755002" target="_blank" class="link-item group">
+                <div class="link-icon bg-green-400">
+                    <i class="fas fa-handshake text-2xl text-white"></i>
                 </div>
-                <i
-                    class="fas fa-arrow-right opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all"></i>
+                <div class="link-content">
+                    <h3 class="link-title">1:1 Career Mentorship</h3>
+                    <p class="link-description">Mock interviews & guidance (150+ interviews conducted)</p>
+                </div>
+                <i class="link-arrow fas fa-arrow-right"></i>
             </a>
-        </div>
 
-        <!-- Section: Communities -->
-        <div class="space-y-4 mt-8">
-            <div class="text-center mb-2">
-                <h2 class="text-xl font-bold highlight-blue inline-block transform -rotate-1">🌍 Communities</h2>
+            <a href="https://openinapp.link/aq10m" target="_blank" class="link-item group">
+                <div class="link-icon bg-purple-500">
+                    <i class="fas fa-calendar-check text-2xl text-white"></i>
+                </div>
+                <div class="link-content">
+                    <h3 class="link-title">Priority Questions</h3>
+                    <p class="link-description">Schedule & ask priority questions via Topmate</p>
+                </div>
+                <i class="link-arrow fas fa-external-link-alt"></i>
+            </a>
+        </section>
+
+        <!-- COMMUNITIES SECTION -->
+        <section class="space-y-3">
+            <div class="text-center mb-4">
+                <h2
+                    class="text-2xl font-bold inline-block px-4 py-2 bg-marker-blue dark:bg-marker-blue-dark rounded-lg transform -rotate-1 shadow-sketch">
+                    🌍 Communities
+                </h2>
             </div>
 
-            <a href="https://linkedin.openinapp.co/groups-13986647" target="_blank"
-                class="block sketch-box p-4 flex items-center gap-4 link-card bg-white dark:bg-paper-dark group hover:bg-blue-50 transition-all text-left">
-                <div
-                    class="text-blue-600 w-12 h-12 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shrink-0">
-                    <i class="fab fa-linkedin"></i></div>
-                <div class="flex-1">
-                    <h3 class="font-bold text-lg group-hover:text-blue-600 transition-colors">DevOps Pros</h3>
-                    <p class="text-sm text-pencil-light dark:text-pencil-dark-light">Join 15,000+ Professionals</p>
+            <a href="https://linkedin.openinapp.co/groups-13986647" target="_blank" class="link-item group">
+                <div class="link-icon bg-blue-600">
+                    <i class="fab fa-linkedin text-2xl text-white"></i>
                 </div>
-                <i class="fas fa-external-link-alt opacity-50 group-hover:opacity-100 transition-opacity"></i>
+                <div class="link-content">
+                    <h3 class="link-title">DevOps Professionals Group</h3>
+                    <p class="link-description">Join 15,000+ cloud & DevOps professionals</p>
+                </div>
+                <i class="link-arrow fas fa-external-link-alt"></i>
             </a>
-        </div>
 
-        <!-- Section: Socials -->
-        <div class="flex justify-center gap-8 mt-12 text-3xl">
-            <a href="https://www.linkedin.com/in/vamsipenmetsa"
-                class="text-pencil dark:text-pencil-dark hover:text-blue-600 hover:scale-125 transition-all duration-300"
-                title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/vamsipenmetsa"
-                class="text-pencil dark:text-pencil-dark hover:text-gray-800 dark:hover:text-white hover:scale-125 transition-all duration-300"
-                title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://medium.com/@vamsipenmetsa"
-                class="text-pencil dark:text-pencil-dark hover:text-black dark:hover:text-white hover:scale-125 transition-all duration-300"
-                title="Medium"><i class="fab fa-medium"></i></a>
-            <a href="mailto:vamsivarmapenmatsa@gmail.com"
-                class="text-pencil dark:text-pencil-dark hover:text-red-500 hover:scale-125 transition-all duration-300"
-                title="Email"><i class="fas fa-envelope"></i></a>
-        </div>
+            <a href="https://www.facebook.com/share/19y88wsYEC/?mibextid=wwXIfr" target="_blank"
+                class="link-item group">
+                <div class="link-icon bg-blue-500">
+                    <i class="fab fa-facebook text-2xl text-white"></i>
+                </div>
+                <div class="link-content">
+                    <h3 class="link-title">International Friends Warsaw</h3>
+                    <p class="link-description">Organizer of 1,000+ member community</p>
+                </div>
+                <i class="link-arrow fas fa-external-link-alt"></i>
+            </a>
+        </section>
 
-        <div class="text-center mt-12 mb-8">
+        <!-- CONNECT SECTION -->
+        <section class="space-y-3">
+            <div class="text-center mb-4">
+                <h2
+                    class="text-2xl font-bold inline-block px-4 py-2 bg-marker-green dark:bg-marker-green-dark rounded-lg transform rotate-1 shadow-sketch">
+                    📱 Connect
+                </h2>
+            </div>
+
+            <a href="https://www.linkedin.com/in/vamsipenmetsa" target="_blank" class="link-item group">
+                <div class="link-icon bg-blue-700">
+                    <i class="fab fa-linkedin text-2xl text-white"></i>
+                </div>
+                <div class="link-content">
+                    <h3 class="link-title">LinkedIn Profile</h3>
+                    <p class="link-description">Professional updates & networking</p>
+                </div>
+                <i class="link-arrow fas fa-external-link-alt"></i>
+            </a>
+
+            <a href="https://github.com/vamsipenmetsa" target="_blank" class="link-item group">
+                <div class="link-icon bg-gray-800 dark:bg-gray-700">
+                    <i class="fab fa-github text-2xl text-white"></i>
+                </div>
+                <div class="link-content">
+                    <h3 class="link-title">GitHub</h3>
+                    <p class="link-description">Open source projects & contributions</p>
+                </div>
+                <i class="link-arrow fas fa-external-link-alt"></i>
+            </a>
+
+            <a href="https://medium.com/@vamsipenmetsa" target="_blank" class="link-item group">
+                <div class="link-icon bg-black dark:bg-gray-900">
+                    <i class="fab fa-medium text-2xl text-white"></i>
+                </div>
+                <div class="link-content">
+                    <h3 class="link-title">Medium Blog</h3>
+                    <p class="link-description">Technical articles & insights</p>
+                </div>
+                <i class="link-arrow fas fa-external-link-alt"></i>
+            </a>
+
+            <a href="mailto:vamsivarmapenmatsa@gmail.com" class="link-item group">
+                <div class="link-icon bg-red-500">
+                    <i class="fas fa-envelope text-2xl text-white"></i>
+                </div>
+                <div class="link-content">
+                    <h3 class="link-title">Email</h3>
+                    <p class="link-description">vamsivarmapenmatsa@gmail.com</p>
+                </div>
+                <i class="link-arrow fas fa-arrow-right"></i>
+            </a>
+
+
+        </section>
+
+        <!-- Back to Portfolio -->
+        <div class="text-center pt-6 pb-4">
             <a href="../index.html"
-                class="inline-block px-4 py-2 rounded-full border border-dashed border-pencil text-sm hover:bg-pencil hover:text-white transition-colors duration-300">
-                ← Back to Portfolio
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-pencil dark:border-pencil-dark text-sm font-medium text-gray-800 dark:text-gray-200 hover:bg-pencil hover:text-white dark:hover:bg-pencil-dark dark:hover:text-white transition-all duration-300 shadow-sketch">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Portfolio</span>
             </a>
         </div>
-
     </div>
 
-    <!-- Theme Toggle (Floating) -->
+    <!-- Theme Toggle -->
     <button id="theme-toggle"
-        class="fixed top-4 right-4 text-xl text-pencil hover:text-blue-600 transition-colors z-50 p-3 bg-white dark:bg-paper-dark rounded-full shadow-sketch border-2 border-pencil dark:border-pencil-dark hover:rotate-12">
+        class="fixed top-4 right-4 text-xl text-pencil dark:text-pencil-dark hover:text-blue-600 transition-all z-50 p-3 bg-white dark:bg-paper-dark rounded-full shadow-sketch border-2 border-pencil dark:border-pencil-dark hover:rotate-12 hover:scale-110">
         <i class="fas fa-moon dark:hidden"></i>
         <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
     </button>
@@ -166,8 +208,124 @@
     <script type="module" src="../src/main.js"></script>
 
     <style>
-        .link-card {
-            border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+        /* Link Item Styles */
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border: 2px solid var(--pencil);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .link-item {
+            background: var(--paper-dark);
+            border-color: var(--pencil-dark);
+        }
+
+        .link-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        .link-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .link-icon i {
+            display: inline-block;
+            line-height: 1;
+        }
+
+
+        .link-item:hover .link-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .link-content {
+            flex: 1;
+            text-align: left;
+            min-width: 0;
+        }
+
+        .link-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin: 0 0 0.25rem 0;
+            color: #1f2937;
+            transition: color 0.3s ease;
+        }
+
+        .dark .link-title {
+            color: #f9fafb;
+        }
+
+        .link-item:hover .link-title {
+            color: #2563eb;
+        }
+
+        .link-description {
+            font-size: 0.875rem;
+            margin: 0;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+
+        .dark .link-description {
+            color: #d1d5db;
+        }
+
+        .link-arrow {
+            font-size: 1.25rem;
+            color: #9ca3af;
+            opacity: 0;
+            transform: translateX(-8px);
+            transition: all 0.3s ease;
+        }
+
+        .link-item:hover .link-arrow {
+            opacity: 1;
+            transform: translateX(0);
+            color: #2563eb;
+        }
+
+        /* Section Headers */
+        section h2 {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .link-title {
+                font-size: 1rem;
+            }
+
+            .link-description {
+                font-size: 0.8125rem;
+            }
+
+            .link-icon {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </body>
